@@ -1,34 +1,58 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Serdar Elektronik - Full-Stack Teknik Servis Uygulaması 🚀
 
-## Getting Started
+Bu proje, Trabzon Arsin'de hizmet veren **Serdar Elektronik** için özel olarak geliştirilmiş modern, dinamik ve tam teşekküllü (Full-Stack) bir web uygulamasıdır. Statik bir HTML sitesinden, Next.js tabanlı güçlü bir altyapıya başarıyla taşınmıştır.
 
-First, run the development server:
+## 🌟 Öne Çıkan Özellikler
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+- **Modern ve Şık Tasarım (Glassmorphism):** Kullanıcıyı yormayan, premium hissettiren bulanık cam efektleri ve akıcı geçiş animasyonları.
+- **Karanlık Mod (Dark Mode) Desteği 🌙:** Kullanıcı tercihine göre tek tıkla değişebilen ve akılda tutulan (localStorage) karanlık/aydınlık tema özelliği.
+- **Dinamik Müşteri Yorumları:** Müşterilerin site üzerinden yıldızlı yorum bırakabileceği ve bu yorumların SQLite veritabanında güvenle saklandığı akıcı slider yapısı.
+- **Online Arıza Kaydı:** Ziyaretçilerin cihaz arızaları için form doldurarak teknik servise kayıt bırakabileceği entegre sistem.
+- **Mesafe ve Süre Hesaplayıcı (OSRM API):** Müşterinin konumunu alarak dükkana olan uzaklığını ve tahmini servis varış süresini anlık hesaplayan akıllı araç.
+- **Özel Yönetici (Admin) Paneli 🛡️:** Sadece yetkili kişinin girip gelen arıza formlarını okuyabileceği ve yeni müşteri yorumlarını onaylayıp/silebileceği gizli yönetim ekranı.
+- **Foto Galeri (Öncesi/Sonrası):** Onarım süreçlerini (örneğin kırık panel tamiri) interaktif bir kaydırıcı ile ziyaretçiye sunan özel galeri bölümü.
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## 🛠️ Kullanılan Teknolojiler
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+- **Frontend:** Next.js (App Router), React, Vanilla CSS
+- **Backend:** Next.js API Routes (Node.js)
+- **Veritabanı:** SQLite
+- **ORM:** Prisma
+- **Güvenlik:** bcryptjs (Admin paneli şifrelemesi)
 
-## Learn More
+## 🚀 Kurulum ve Çalıştırma
 
-To learn more about Next.js, take a look at the following resources:
+Projeyi kendi bilgisayarınızda çalıştırmak için şu adımları izleyin:
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+1. Depoyu bilgisayarınıza klonlayın:
+   ```bash
+   git clone https://github.com/Y-MuammerCelik/serdar-elektronik-web.git
+   ```
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+2. Proje dizinine girin:
+   ```bash
+   cd serdar-elektronik-web
+   ```
 
-## Deploy on Vercel
+3. Gerekli paketleri yükleyin:
+   ```bash
+   npm install
+   ```
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+4. Veritabanını oluşturun ve başlangıç verilerini yükleyin (Seed):
+   ```bash
+   npx prisma generate
+   npx prisma migrate dev --name init
+   npm run prisma:seed
+   ```
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+5. Geliştirici sunucusunu başlatın:
+   ```bash
+   npm run dev
+   ```
+
+6. Tarayıcınızdan [http://localhost:3000](http://localhost:3000) adresine giderek siteyi görüntüleyin.
+   *Yönetici paneli için [http://localhost:3000/admin](http://localhost:3000/admin) adresine gidebilirsiniz (Kullanıcı Adı: admin, Şifre: serdar2026)*
+
+## 👨‍💻 Geliştirici
+Bu proje **Muammer Çelik** tarafından geliştirilmiştir.
